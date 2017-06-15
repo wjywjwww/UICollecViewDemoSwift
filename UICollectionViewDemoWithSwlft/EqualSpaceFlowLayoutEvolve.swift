@@ -33,9 +33,9 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
     }
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
-        let layoutAttributes_t : [UICollectionViewLayoutAttributes] = super.layoutAttributesForElements(in: rect)!
-        let layoutAttributes:[UICollectionViewLayoutAttributes] = NSArray(array: layoutAttributes_t, copyItems:true)as! [UICollectionViewLayoutAttributes]
-        var layoutAttributesTemp : [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
+        let layoutAttributes_super : [UICollectionViewLayoutAttributes] = super.layoutAttributesForElements(in: rect) ?? [UICollectionViewLayoutAttributes]()
+        let layoutAttributes:[UICollectionViewLayoutAttributes] = NSArray(array: layoutAttributes_super, copyItems:true)as! [UICollectionViewLayoutAttributes]
+        var layoutAttributes_t : [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
         for index in 0..<layoutAttributes.count{
             
             let currentAttr = layoutAttributes[index]
@@ -43,7 +43,7 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
             let nextAttr = index + 1 == layoutAttributes.count ?
                 nil : layoutAttributes[index+1]
             
-            layoutAttributesTemp.append(currentAttr)
+            layoutAttributes_t.append(currentAttr)
             sumWidth += currentAttr.frame.size.width
             
             let previousY :CGFloat = previousAttr == nil ? 0 : previousAttr!.frame.maxY
@@ -52,19 +52,19 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
             
             if currentY != previousY && currentY != nextY{
                 if currentAttr.representedElementKind == UICollectionElementKindSectionHeader{
-                    layoutAttributesTemp.removeAll()
+                    layoutAttributes_t.removeAll()
                     sumWidth = 0.0
                 }else if currentAttr.representedElementKind == UICollectionElementKindSectionFooter{
-                    layoutAttributesTemp.removeAll()
+                    layoutAttributes_t.removeAll()
                     sumWidth = 0.0
                 }else{
-                    self.setCellFrame(with: layoutAttributesTemp)
-                    layoutAttributesTemp.removeAll()
+                    self.setCellFrame(with: layoutAttributes_t)
+                    layoutAttributes_t.removeAll()
                     sumWidth = 0.0
                 }
             }else if currentY != nextY{
-                self.setCellFrame(with: layoutAttributesTemp)
-                layoutAttributesTemp.removeAll()
+                self.setCellFrame(with: layoutAttributes_t)
+                layoutAttributes_t.removeAll()
                 sumWidth = 0.0
             }
         }
