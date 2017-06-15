@@ -87,6 +87,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         var dataTemp = dataArray[0]
         dataTemp.remove(at: indePath.item)
         dataArray[0] = dataTemp
+//        let indexSet = IndexSet(integer: 0)
+//        self.collectionView.reloadSections(indexSet)
         self.collectionView.reloadData()
     }
     func add(_ indePath : IndexPath){
@@ -97,6 +99,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         itemData.size = CGSize(width: CGFloat((n * 5)) + 50.0, height: 30)
         dataTemp.append(itemData)
         dataArray[1] = dataTemp
+//        let indexSet = IndexSet(integer: 1)
+//        self.collectionView.reloadSections(indexSet)
         self.collectionView.reloadData()
     }
 }
