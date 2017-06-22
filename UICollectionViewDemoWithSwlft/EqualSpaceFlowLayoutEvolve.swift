@@ -13,6 +13,7 @@ enum AlignType : NSInteger {
     case right = 2
 }
 class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
+   
     //两个Cell之间的距离
     var betweenOfCell : CGFloat = 5.0;
     //cell对齐方式
@@ -105,12 +106,11 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
             break;
         }
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
 
 
 

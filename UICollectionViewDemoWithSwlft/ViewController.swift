@@ -32,7 +32,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     func loadData(){
         for _ in 0 ... 1{
             var dataArrayTemp = [ItemData]()
-            for index in 0 ..< 10{
+            for index in 0 ..< 100{
                 let n = arc4random() % 10 + 1
                 let itemData = ItemData()
                 itemData.content = "\(index)"
@@ -41,7 +41,6 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             }
             dataArray.append(dataArrayTemp)
         }
-       
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataArray.count

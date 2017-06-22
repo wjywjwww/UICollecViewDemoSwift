@@ -18,7 +18,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     var label : UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.borderColor = UIColor.init(red: 99/255.0, green: 99/255.0, blue: 99/255.0, alpha: 1.0).cgColor
+        self.layer.borderColor = UIColor.init(red: 100/255.0, green: 100/255.0, blue: 100/255.0, alpha: 1.0).cgColor
         self.layer.borderWidth = 0.8
         label = UILabel(frame: self.bounds)
         label.font = UIFont.systemFont(ofSize: 13)
