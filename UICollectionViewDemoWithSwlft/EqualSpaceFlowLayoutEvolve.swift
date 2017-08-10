@@ -15,17 +15,21 @@ enum AlignType : NSInteger {
 class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
    
     //两个Cell之间的距离
-    var betweenOfCell : CGFloat = 5.0;
+    var betweenOfCell : CGFloat{
+        didSet{
+            self.minimumInteritemSpacing = betweenOfCell
+        }
+    }
     //cell对齐方式
     var cellType : AlignType = AlignType.left
     //在居中对齐的时候需要知道这行所有cell的宽度总和
     var sumWidth : CGFloat = 0.0
     
     override init() {
+        betweenOfCell = 5.0
         super.init()
         scrollDirection = UICollectionViewScrollDirection.vertical
         minimumLineSpacing = 5
-        minimumInteritemSpacing = 5
         sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
     }
     convenience init(with cellType:AlignType){
@@ -72,6 +76,9 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
         return layoutAttributes
     }
     
+    /// 调整Cell的Frame
+    ///
+    /// - Parameter layoutAttributes: layoutAttribute 数组
     func setCellFrame(with layoutAttributes : [UICollectionViewLayoutAttributes]){
         var nowWidth : CGFloat = 0.0
         switch cellType {
@@ -85,7 +92,7 @@ class EqualSpaceFlowLayoutEvolve: UICollectionViewFlowLayout {
             }
             break;
         case AlignType.center:
-            nowWidth = (self.collectionView!.frame.size.width - sumWidth - (CGFloat(layoutAttributes.count ) * betweenOfCell)) / 2
+            nowWidth = (self.collectionView!.frame.size.width - sumWidth - (CGFloat(layoutAttributes.count - 1) * betweenOfCell)) / 2
             for attributes in layoutAttributes{
                 var nowFrame = attributes.frame
                 nowFrame.origin.x = nowWidth
