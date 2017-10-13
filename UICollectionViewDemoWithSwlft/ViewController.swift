@@ -17,13 +17,11 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         
         self.loadData()
         
-        let flowLayout = EqualSpaceFlowLayoutEvolve(with: AlignType.center)
+        let flowLayout = JYEqualCellSpaceFlowLayout(AlignType.center, 5.0)
         collectionView  = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
-        
         collectionView.backgroundColor = UIColor.lightGray
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         self.view.addSubview(collectionView)
         
         collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerIdentifier")
