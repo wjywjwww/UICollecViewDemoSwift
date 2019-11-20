@@ -202,18 +202,21 @@
 				TargetAttributes = {
 					1BE88FC41ED8134D003851A8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = PD6H97QKA5;
+						DevelopmentTeam = L7XQ5M6XV5;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					1BE88FD81ED8134D003851A8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PD6H97QKA5;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1BE88FC41ED8134D003851A8;
 					};
 					1BE88FE31ED8134D003851A8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PD6H97QKA5;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1BE88FC41ED8134D003851A8;
 					};
@@ -224,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -425,12 +429,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD6H97QKA5;
+				DEVELOPMENT_TEAM = L7XQ5M6XV5;
 				INFOPLIST_FILE = UICollectionViewDemoWithSwlft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -438,12 +442,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD6H97QKA5;
+				DEVELOPMENT_TEAM = L7XQ5M6XV5;
 				INFOPLIST_FILE = UICollectionViewDemoWithSwlft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -457,7 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewDemoWithSwlft.app/UICollectionViewDemoWithSwlft";
 			};
 			name = Debug;
@@ -472,7 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewDemoWithSwlft.app/UICollectionViewDemoWithSwlft";
 			};
 			name = Release;
@@ -486,7 +490,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = UICollectionViewDemoWithSwlft;
 			};
 			name = Debug;
@@ -500,7 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.besttone.UICollectionViewDemoWithSwlftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = UICollectionViewDemoWithSwlft;
 			};
 			name = Release;

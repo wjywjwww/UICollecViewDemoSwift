@@ -24,7 +24,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
         
-        collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerIdentifier")
+        collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerIdentifier")
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "CellIdentifier")
     }
     func loadData(){
@@ -55,8 +55,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var reusableview : UICollectionReusableView = UICollectionReusableView()
-        if (kind == UICollectionElementKindSectionHeader){
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerIdentifier", for: indexPath)
+        if (kind == UICollectionView.elementKindSectionHeader){
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerIdentifier", for: indexPath)
             reusableview = headerView
         }
         return reusableview
