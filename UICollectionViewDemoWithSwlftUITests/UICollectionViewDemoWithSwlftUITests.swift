@@ -2,7 +2,7 @@
 //  UICollectionViewDemoWithSwlftUITests.swift
 //  UICollectionViewDemoWithSwlftUITests
 //
-//  Created by sks on 17/5/26.
+//  Created by Tiank on 17/5/26.
 //  Copyright © 2017年 besttone. All rights reserved.
 //
 
